@@ -1,0 +1,318 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+	background: #ffffff;
+	color: #000000;
+	min-height: 100vh;
+
+}
+
+/* header */
+.section-header{
+	/*background: linear-gradient( #000000, #ffffff24) ,
+	url("http://localhost/kaiac_canoe/assets/img/banner.jpg");
+	padding-top: 1px;*/
+
+	background: linear-gradient(70deg, #424242, #bdbdbd);
+
+
+}
+.header {
+	width: 100%;
+	position: relative;
+	max-width: 100%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	z-index: 1;
+}
+.header a {
+	text-decoration: none;
+	color: #000000;
+}
+.header ul {
+	list-style: none;
+}
+.logo {
+	font-size: 2rem;
+}
+.menu-items {
+	display: flex;
+	align-items: center;
+}
+.menu-items li {
+	padding: 0.5rem 1rem;
+	transition: background 0.3s ease-in-out;
+}
+.menu-items li:hover {
+	/*background-color:*/
+}
+
+/* dropdown */
+.dropdown {
+	position: relative;
+}
+.dropdown-menu,
+.menu-right {
+	position: absolute;
+	/*background: #ffffff;*/
+	background: linear-gradient(70deg, #676666, #bdbdbd);
+	width: 100%;
+	top: 50px;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+.menu-right {
+	top: 0;
+	left: 110%;
+}
+.menu-item {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.dropdown:hover .dropdown-menu {
+	top: 34px;
+	opacity: 1;
+	visibility: visible;
+}
+.dropdown-right:hover .menu-right {
+	left: 100%;
+	opacity: 1;
+	visibility: visible;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+
+	position: relative;
+	margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+footer {
+	background:rgba(54,53,54,.96); /* Dark color/Footer color, can be changed via colors.css */
+	color:#fff;
+	padding: 15px 0 0 0;
+}
+
+footer h2{
+	display: inline-block;
+	color:#fff;
+}
+
+footer h4{
+	margin: 0 0 20px 0;
+	padding: 0;
+	color:#fff;
+}
+
+footer p {
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+footer ul.blog-entries,
+footer ul.twitter-entries{
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+footer ul.blog-entries li,
+footer ul.twitter-entries li{
+	margin: 10px 0;
+	line-height: 1.5;
+}
+
+footer ul.blog-entries li span,
+footer ul.twitter-entries li span{
+	display: block;
+	color: #6d7579;
+}
+
+footer .copynote{
+	padding: 20px 0;
+	margin-top: 40px;
+	background:rgba(54, 53, 54, 1); /* Dark color/Footer color, can be changed via colors.css */
+}
+
+footer .segment{
+	padding-bottom: 20px;
+}
+
+footer .social a{
+	display: inline-block;
+	padding: 6px;
+}
+
+.scroll-top {
+	display: none;
+	position: fixed;
+	bottom: 4%;
+	right: 1%;
+	z-index: 100;
+}
+
+.scroll-top a:link,
+.scroll-top a:visited {
+	display: inline-block;
+	padding: 5px 15px;
+	color: #fff;
+	border: 1px solid rgba(254,82,76, 1);
+	background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+	font-size: 30px;
+}
+
+.scroll-top a:hover {
+	border: 1px solid #fff; /* Hover border color, can be changed via colors.css */
+	outline: 0;
+	color: #fff;
+	background: #df514c; /* Hover color, can be changed via colors.css */
+}
+
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+	background-color: #676666;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+/* Style the container */
+.container {
+	border-radius: 5px;
+	padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.col-25, .col-75, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+div.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 180px;
+}
+
+div.gallery:hover {
+	border: 1px solid #777;
+}
+
+div.gallery img {
+	width: 100%;
+	height: auto;
+}
+
+div.desc {
+	padding: 30px;
+	text-align: center;
+}
+
