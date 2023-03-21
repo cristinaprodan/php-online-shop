@@ -51,6 +51,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'users/home';
 $route['home'] = 'users/home/index';
+$route['home/(:any)'] = 'users/home/index/$1';
 $route['about'] = 'users/about/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['login']='login/login/index';
+$route['logout']='login/logout/index';
+$route['verify']='login/verify/index';
+$route['cart']='users/cart/index';
+$route['product/(:any)'] = 'users/home/product/$1';

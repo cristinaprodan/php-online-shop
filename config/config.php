@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/kaiac_canoe/';
+$config['base_url'] = 'http://localhost/online_shop/';
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +68,7 @@ $config['uri_protocol']	= 'REQUEST_URI';
 */
 $config['url_suffix'] = '';
 
+$config['encryption_key'] = '312313134342425462';
 /*
 |--------------------------------------------------------------------------
 | Default Language

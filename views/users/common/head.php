@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Canoe Sprint</title>
+	<title>Online Shoop</title>
 	<!-- mobile apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,3 +20,35 @@
 	<!-- //web-fonts -->
 </head>
 
+<script>
+	function ajaxSearch2()
+	{
+		var input_data = $('#search_data2').val();
+
+		var post_data = {
+			'search_data': input_data,
+			'<?php echo $this->security->get_csrf_token_name(); ?>': '<?php echo $this->security->get_csrf_hash(); ?>'
+		};
+		$.ajax({
+			type: "POST",
+			url: "http://localhost/online_shop/index.php/Search/autocomplete/",
+			data: post_data,
+			success: function (data) {
+				// return success
+				if (data.length > 0) {
+					$('#suggestions2').show();
+					$('#autoSuggestionsList2').addClass('auto_list');
+					$('#autoSuggestionsList2').html(data);
+					$("#autoSuggestionsList2").show();
+
+					$(document).on('click', function (e) {
+						if ($(e.target).closest("#autoSuggestionsList2").length === 0) {
+							$("#autoSuggestionsList2").hide();
+						}
+					});
+				}
+			}
+		});
+
+	}
+</script>
